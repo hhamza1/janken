@@ -6,7 +6,7 @@ let compScore = 0;
 const user_score = document.getElementById("user-score");
 const comp_score = document.getElementById("comp-score");
 const score_board = document.querySelector(".score-board");
-const result = document.querySelector(".result");
+const result = document.querySelector(".result p");
 const rock_element = document.getElementById("rock");
 const paper_element = document.getElementById("paper");
 const scissors_element = document.getElementById("scissors");
@@ -31,7 +31,7 @@ const draw = () => {
 
 // Function to Get Computer's Choice
 const getCompChoices = () => {
-    const choices = ["rock","paper","scissors"];
+    const choices = ["Rock","Paper","Scissors"];
     return choices[Math.floor(Math.random()*3)];
 }
 
@@ -42,18 +42,21 @@ const game = (userChoice) => {
     console.log(`User's choice: ${userChoice}`);
     console.log(`Computer's choice: ${computerChoice}`);
     switch (userChoice + computerChoice) {
-        case "rockscissors":
-        case "scissorspaper":
-        case "paperrock":
+        case "RockScissors":
+        case "ScissorsPaper":
+        case "PaperRock":
+            result.innerText = `${userChoice} vs ${computerChoice} : You win !`;
             win();
             break;
-        case "rockpaper":
-        case "scissorsrock":
-        case "paperscissors":
+        case "RockPaper":
+        case "ScissorsRock":
+        case "PaperScissors":
+            result.innerText = `${userChoice} vs ${computerChoice} : You lose !`;
             lose();
             break;
 
         default:
+            result.innerText = `${userChoice} vs ${computerChoice} : A draw !`;
             draw();
             break;
     } 
@@ -61,15 +64,15 @@ const game = (userChoice) => {
 
 const main = () => {
     rock_element.addEventListener("click", () => {
-        game("rock");
+        game("Rock");
     });
     
     paper_element.addEventListener("click", () => {
-        game("paper");
+        game("Paper");
     });
     
     scissors_element.addEventListener("click", () => {
-        game("scissors");
+        game("Scissors");
     });
 }
 
