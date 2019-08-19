@@ -14,7 +14,7 @@ const scissors_element = document.getElementById("scissors");
 
 //Game functions - Win/Lose/Draw
 
-const win = () => {
+const win = (userChoice) => {
     userScore++;
     user_score.innerText = userScore;
 }
@@ -25,7 +25,7 @@ const lose = () => {
 }
 
 const draw = () => {
-    console.log("A draw!");
+    console.log("Janken draw!!");
 }
 
 
@@ -39,8 +39,6 @@ const getCompChoices = () => {
 
 const game = (userChoice) => {
     const computerChoice = getCompChoices();
-    console.log(`User's choice: ${userChoice}`);
-    console.log(`Computer's choice: ${computerChoice}`);
     switch (userChoice + computerChoice) {
         case "RockScissors":
         case "ScissorsPaper":
