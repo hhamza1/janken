@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #225762;
+}
+
+header {
+    background: #fff;
+    padding: 20px;
+}
+
+header > h1 {
+    color:  #589595;
+    font-family: "Lobster", cursive;
+    text-align: center;
+}
+
+.score-board {
+    border: 3px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    font-family: "Lobster", cursive;
+    font-size: 46px;
+    margin: 20px auto;
+    padding: 15px 20px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+}
+
+
+.badge {
+    background: #de6a68;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+#user-label {
+    position: absolute;
+    top:30px;
+    left:-30px;
+}
+
+#comp-label {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+}
+
+.result {
+    color: #fff;
+    font-size: 40px;
+}
+
+.result > p {
+    font-family: "Lobster", cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+.choices {
+    margin-top: 20px;
+    text-align:center;
+}
+
+.choice {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 10px;
+    margin: 0 20px;
+    transition: all ease .4s;
+}
+
+.choice > img {
+    max-width: 200px;
+}
+
+.choice:hover {
+    cursor: pointer;
+    padding: 5px;
+    background: #348394;
+}
+
+
+
+#action-message {
+    text-align: center;
+    color: #fff;
+    font-family: "Lobster", cursive;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px;
+}
